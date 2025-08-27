@@ -1,18 +1,15 @@
 import express, { Application } from "express";
-import greetingRouter from "./routes/greeting.route";
+import { Routes } from "./routes/routes";
+
 
 const app:Application = express();
 
 app.use(express.json());
-app.use("/greeting",greetingRouter);
+app.use("/api" ,Routes.getInstance().router);
 
-app.get("/", (req, res) => {
-    res.send("Hello World");    
-});
 
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-export default app;

@@ -1,37 +1,28 @@
-import { Router,Request,Response} from "express";
+import { Router, Request, Response } from "express";
 
-
-export class GreetingRoute{
-    public static instance:GreetingRoute;
-
-    public static getInstance():GreetingRoute{
-        if(!GreetingRoute.instance){
-            GreetingRoute.instance = new GreetingRoute();
-        }
-        return GreetingRoute.instance;
-    }
-
+export class CustomerRoute{
+    public static instance:CustomerRoute;
     public router:Router;
+
+    public static getInstance():CustomerRoute{
+        if(!CustomerRoute.instance){
+            CustomerRoute.instance = new CustomerRoute();
+        }
+        return CustomerRoute.instance;
+    }
 
     private constructor(){
         this.router = Router();
         this.setupRoutes();
     }
-
     private setupRoutes(){
         this.router.get("/",(req:Request,res:Response)=>{
             res.send("Hello World");
         });
-
         this.router.post("/",(req:Request,res:Response)=>{
             const {name} = req.body;
             res.send(`Hello ${name}`);
         });
     }
-
 }
-
-
-
-
 
