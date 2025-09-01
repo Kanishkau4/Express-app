@@ -15,5 +15,10 @@ export const ERRORS = {
         key: "GET_FAILED",
         message: "Failed to get data"
     },
+    USER_NOT_FOUND: {
+        key: "USER_NOT_FOUND",
+        message: "User not found"
+    },
+
 
 }
