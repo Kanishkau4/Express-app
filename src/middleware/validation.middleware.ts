@@ -25,7 +25,7 @@ export function validateRequestBody(schema: any) : (req:Request, res:Response, n
         const isvalidRequestBody = ajv.validate(schema, req.body);
 
         if (!isvalidRequestBody) {
-             return errorResponse(HttpStatus.BAD_REQUEST,res,ERRORS.INVALID_REQUEST_BODY_FORMAT);
+             return errorResponse(HttpStatus.BAD_REQUEST,res,ERRORS.INVALID_REQUEST_BODY_FORMAT, ajv.errorsText());
         }
         next();
     }
