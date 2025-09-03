@@ -3,7 +3,7 @@ import { ERRORS } from "../common/constants/errors.constants";
 import { HttpStatus } from "../common/constants/httpStatus.enum";
 import { errorResponse, SuccessResponse } from "../common/responseHandler";
 import { UserService } from "../service/user.service";
-import { CreateUserDto } from "../dto/createUser.dto";
+import { CreateUserDto } from "../dto/user/createUser.dto";
 
 export class UserController { 
     private static instance: UserController;

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { UserController } from "../controller/user.controller";
 import { validateRequestBody } from "../middleware/validation.middleware";
-import { createUserDtoSchema } from "../dto/createUser.dto";
+import { createUserDtoSchema } from "../dto/user/createUser.dto";
 
 export class UserRoute {
     private static instance: UserRoute;

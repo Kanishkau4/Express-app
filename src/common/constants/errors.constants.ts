@@ -23,5 +23,9 @@ export const ERRORS = {
         key: "INVALID_REQUEST_BODY_FORMAT",
         message: "Invalid request body format"
     },
+    FOOD_NOT_FOUND: {
+        key: "FOOD_NOT_FOUND",
+        message: "Food not found"
+    },
 
 }

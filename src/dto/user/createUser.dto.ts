@@ -1,4 +1,4 @@
-import { UserTypes } from "../interface/util/userTypes.enum";
+import { UserTypes } from "../../interface/util/userTypes.enum";
 
 export const createUserDtoSchema = {
     type: "object",
